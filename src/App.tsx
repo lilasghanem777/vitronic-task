@@ -1,24 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import { Grid } from "@mui/material";
+import UserMap from "./views/UserMap";
+import NavBar from "./views/NavBar";
+import Footer from "./views/Footer";
+import SideInfo from "./views/SideInfo";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar />
+      <Grid container>
+        <UserMap />
+        <SideInfo />
+      </Grid>
+      <Footer />
     </div>
   );
 }

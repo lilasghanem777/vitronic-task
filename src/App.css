@@ -1,38 +1,83 @@
 .App {
+  height: 100vh;
+  width: 100%;
+}
+
+.circle {
+  background-color: #d83b01;
+  border-radius: 50%;
+  color: #fff;
+  height: 2.5em;
+  position: relative;
+  width: 2.5em;
+
+  border: 1px solid transparent;
+}
+
+.circleText {
   text-align: center;
+  height: 50%;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* ############# Styling info window of map marker #############  */
+.gm-style .gm-style-iw-c {
+  background-color: #e8ebeded !important;
+  width: 400px !important;
+  border: 1px solid #001e46 !important;
+  color: #001e46;
+}
+.gm-style-iw-d {
+  overflow: auto !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.gm-style .gm-style-iw-tc::after {
+  background-color: #001e46;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.gm-style-iw-d img {
+  width: 20px !important;
 }
 
-.App-link {
-  color: #61dafb;
+.gm-style-iw-d div div div {
+  width: 30% !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+/* ############# Styling pie chart #############  */
+
+.overflow_chart {
+  position: absolute;
+  width: 340px;
+  height: 320px;
+  z-index: 999;
+  left: 20px;
+  background-color: #e8ebeded;
+  top: 20px;
+  border-radius: 6px;
+}
+
+/* ############# Styling info side #############  */
+.headTable {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  border-bottom: 2px solid #001e46;
+  border-top: 2px solid #001e46;
+}
+
+.review_progress .css-eglki6-MuiLinearProgress-root {
+  background-color: #a4abb0 !important;
+}
+.review_progress .css-5xe99f-MuiLinearProgress-bar1 {
+  background-color: #5dae95 !important;
+}
+
+@media only screen and (max-width: 520px) {
+  .overflow_chart {
+    width: 220px;
   }
 }
